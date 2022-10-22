@@ -13,20 +13,20 @@ class AreaPlaneShapes:
         https://www.mathsisfun.com/area.html
         """
         # Validate `radius` of type int | float
-        if isinstance(radius, int | float):
+        if isinstance(radius, int | float | None):
             self.radius = radius
         else:
             raise ValueError("Input `radius` should be of Type - Int or Float")
 
         # Validate `base` and `height` of type int | float
-        if isinstance(base, int | float) and isinstance(height, int | float):
+        if isinstance(base, int | float | None) and isinstance(height, int | float | None):
             self.base = base
             self.height = height
         else:
             raise ValueError("Inputs `base` and `height` should be of Type - Int or Float")
 
             # Validate `side` of type int | float
-        if isinstance(side, int | float):
+        if isinstance(side, int | float | None):
             self.side = side
         else:
             raise ValueError("Input `side` should be of Type - Int or Float")
