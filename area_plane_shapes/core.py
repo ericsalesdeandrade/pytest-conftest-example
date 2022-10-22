@@ -7,10 +7,17 @@ logging.basicConfig(level=logging.INFO)
 
 class AreaPlaneShapes:
     def __init__(self, radius=None, base: int | float = None,
-                 height: int | float = None, side: int | float = None):
+                 height: int | float = None, side: int | float = None) -> None:
         """
         Function to initialise the Area of Plane Shapes Class
         https://www.mathsisfun.com/area.html
+        Parameters:
+            radius - Radius of the circle
+            base - Base of the triangle
+            height - Height of the triangle or rectangle
+            side - Side of the Square and Rectangle
+        Return: 
+            None
         """
         # Validate `radius` of type int | float
         if isinstance(radius, int | float | None):
