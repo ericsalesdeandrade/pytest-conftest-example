@@ -78,12 +78,14 @@ def test_invalid_radius() -> None:
 
 
 def test_area_square_side_none(area_fixture_side_none) -> None:
-    expected_response = "Area Unavailable. Please initialise Class with `Side`"
+    expected_response = "Area Unavailable. " \
+                        "Please initialise Class with `Side`"
     actual_response = area_fixture_side_none.area_of_square()
     assert actual_response == expected_response
 
 
 def test_area_rectangle_height_none(area_fixture_height_none) -> None:
-    expected_response = "Area Unavailable. Please initialise Class with `Side` and `Height`"
+    expected_response = "Area Unavailable. " \
+                        "Please initialise Class with `Side` and `Height`"
     actual_response = area_fixture_height_none.area_of_rectangle()
     assert actual_response == expected_response
