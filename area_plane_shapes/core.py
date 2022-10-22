@@ -10,6 +10,7 @@ class AreaPlaneShapes:
                  height: int | float = None, side: int | float = None):
         """
         Function to initialise the Area of Plane Shapes Class
+        https://www.mathsisfun.com/area.html
         """
         # Validate `radius` of type int | float
         if isinstance(radius, int | float):
