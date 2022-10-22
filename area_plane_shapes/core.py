@@ -31,51 +31,63 @@ class AreaPlaneShapes:
         else:
             raise ValueError("Input `side` should be of Type - Int or Float")
 
-    def area_of_triangle(self) -> int | float:
+    def area_of_triangle(self) -> str:
         """
         Function to calculate Area of Triangle
         Required Parameters - Base and Height, Type - int | float
-       :return: Area, Type - int | float
+       :return: Area, Type - str
         """
         try:
-            area = 0.5 * self.base * self.height
-            return area
+            if all(item is not None for item in [self.base, self.height]):
+                area = round(0.5 * self.base * self.height, 2)
+                return f"The Area of the Triangle is `{area}` units"
+            else:
+                return "Area Unavailable. Please initialise Class with `Base` and `Height`"
         except Exception as err:
             logging.error(err)
 
-    def area_of_circle(self) -> int | float:
+    def area_of_circle(self) -> str:
         """
         Function to calculate Area of Circle
         Required Parameters - Radius, Type - int | float
-        :return: Area, Type - int | float
+        :return: Area, Type - str
         """
         try:
-            area = math.pi * pow(self.radius, 2)
-            return area
+            if self.radius is not None:
+                area = round(math.pi * pow(self.radius, 2), 2)
+                return f"The Area of the Circle is `{area}` units"
+            else:
+                return "Area Unavailable. Please initialise Class with `Radius`"
         except Exception as err:
             logging.error(err)
 
-    def area_of_square(self) -> int | float:
+    def area_of_square(self) -> str:
         """
         Function to calculate Area of Square
         Required Parameters - Side, Type - int | float
-       :return: Area, Type - int | float
+       :return: Area, Type - str
         """
         try:
-            area = pow(self.side, 2)
-            return area
+            if self.side is not None:
+                area = round(pow(self.side, 2), 2)
+                return f"The Area of the Square is `{area}` units"
+            else:
+                return "Area Unavailable. Please initialise Class with `Side`"
         except Exception as err:
             logging.error(err)
 
-    def area_of_rectangle(self) -> int | float:
+    def area_of_rectangle(self) -> str:
         """
         Function to calculate Area of Rectangle
         Required Parameters - Side and Height, Type - int | float
-       :return: Area, Type - int | float
+       :return: Area, Type - str
         """
         try:
-            area = self.side * self.height
-            return area
+            if all(item is not None for item in [self.side, self.height]):
+                area = round(self.side * self.height, 2)
+                return f"The Area of the Rectangle is `{area}` units"
+            else:
+                return "Area Unavailable. Please initialise Class with `Side` and `Height`"
         except Exception as err:
             logging.error(err)
 
