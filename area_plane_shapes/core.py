@@ -16,7 +16,7 @@ class AreaPlaneShapes:
             base - Base of the triangle
             height - Height of the triangle or rectangle
             side - Side of the Square and Rectangle
-        Return: 
+        Return:
             None
         """
         # Validate `radius` of type int | float
