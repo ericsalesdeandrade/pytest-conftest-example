@@ -4,29 +4,26 @@ from area_plane_shapes.core import AreaPlaneShapes
 
 @pytest.fixture(scope="class")
 def area_fixture():
-    area_plane_shapes_obj = AreaPlaneShapes(radius=2,
-                                            base=2,
-                                            height=4,
-                                            side=3)
-    return area_plane_shapes_obj
+    return AreaPlaneShapes(radius=2,
+                           base=2,
+                           height=4,
+                           side=3)
 
 
 @pytest.fixture(scope="class")
 def area_fixture_side_none():
-    area_plane_shapes_obj = AreaPlaneShapes(radius=2,
-                                            base=2,
-                                            height=4,
-                                            )
-    return area_plane_shapes_obj
+    return AreaPlaneShapes(radius=2,
+                           base=2,
+                           height=4,
+                           )
 
 
 @pytest.fixture(scope="class")
 def area_fixture_height_none():
-    area_plane_shapes_obj = AreaPlaneShapes(radius=2,
-                                            base=2,
-                                            side=3
-                                            )
-    return area_plane_shapes_obj
+    return AreaPlaneShapes(radius=2,
+                           base=2,
+                           side=3
+                           )
 
 
 def test_area_of_triangle(area_fixture) -> None:
