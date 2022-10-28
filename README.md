@@ -1,5 +1,7 @@
 # How To Use `conftest.py` in PyTest
 
+This repo contains the sample code for the article - [Pytest Conftest With Best Practices And Real Examples](https://pytest-with-eric/pytest-best-practices/pytest-conftest/)
+
 # Requirements
 * Python (3.10.6)
 
